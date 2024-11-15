@@ -5,7 +5,7 @@ import VolumeChart from "@/components/_components/volume-chart";
 
 export default function Home() {
   return (
-    <main className="mx-12 my-5">
+    <main className="mx-12 mt-10">
       {/* <div className="grid gap-4 md:grid-cols-2"> */}
       <VolumeChart />
       {/* </div> */}

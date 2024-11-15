@@ -69,7 +69,7 @@ export default function VolumeChart() {
 
   return (
     <div className="grid gap-4 md:grid-cols-2">
-      <Card className="bg-white">
+      <Card className="bg-gray-400">
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
           <CardTitle className="text-base font-normal text-gray-600">
             Total Volume
