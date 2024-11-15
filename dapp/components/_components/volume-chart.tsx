@@ -15,8 +15,14 @@ import {
 } from "recharts";
 
 const totalVolumeData = [
-  { date: "Jul", value: 2000000 },
-  { date: "Aug", value: 6000000 },
+  { date: "Jan", value: 8124632 },
+  { date: "Feb", value: 10000000 },
+  { date: "Mar", value: 10000000 },
+  { date: "Apr", value: 12000000 },
+  { date: "May", value: 9000000 },
+  { date: "Jun", value: 11000000.58 },
+  { date: "Jul", value: 10670000 },
+  { date: "Aug", value: 7800000 },
   { date: "Sep", value: 10000000 },
   { date: "Oct", value: 12000000 },
   { date: "Nov", value: 10000000 },
@@ -24,12 +30,18 @@ const totalVolumeData = [
 ];
 
 const totalLiquidityData = [
-  { date: "Jul", value: 2000000000 },
-  { date: "Aug", value: 3000000000 },
-  { date: "Sep", value: 4000000000 },
-  { date: "Oct", value: 5000000000 },
-  { date: "Nov", value: 4000000000 },
-  { date: "Dec", value: 3006124632.55 },
+  { date: "JAN", value: 7000000000 },
+  { date: "FEB", value: 3500000000 },
+  { date: "MAR", value: 3900000000 },
+  { date: "APR", value: 3000000000 },
+  { date: "MAY", value: 5000000000 },
+  { date: "JUN", value: 6800000000 },
+  { date: "JUL", value: 8000000000 },
+  { date: "AUG", value: 9800000000 },
+  { date: "SEP", value: 7006124632.55 },
+  { date: "OCT", value: 5006124632.55 },
+  { date: "NOV", value: 6806124600.55 },
+  { date: "DEC", value: 5606124632.55 },
 ];
 
 const formatCurrency = (value: number) => {
