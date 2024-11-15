@@ -38,67 +38,69 @@ const chartConfig = {
 
 export default function FGAToken() {
   return (
-    <Card className="overflow-hidden w-fit">
-      <div className="bg-[#d6e8ff] p-4">
-        <div className="flex items-center gap-3 ">
-          <Image src={Logo} alt="logoimg" />
-          <div>
-            <div className="text-sm text-gray-600">Token Price</div>
-            <div className="flex items-center gap-2">
-              <span className="text-xl font-semibold">$2.24</span>
-              <span className="text-sm text-green-500">↗ 34.65%</span>
+    <main>
+      <h2 className="text-[20px] font-bold mb-5">FGA Token</h2>
+      <Card className="overflow-hidden w-fit">
+        <div className="bg-[#d6e8ff] p-4">
+          <div className="flex items-center gap-3 ">
+            <Image src={Logo} alt="logoimg" />
+            <div>
+              <div className="text-sm text-gray-600">Token Price</div>
+              <div className="flex items-center gap-2">
+                <span className="text-xl font-semibold">$2.24</span>
+                <span className="text-sm text-green-500">↗ 34.65%</span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <CardContent className="p-0">
-        <ChartContainer className="h-[200px] mt-10" config={chartConfig}>
-          <LineChart
-            accessibilityLayer
-            data={priceData}
-            margin={{
-              left: 12,
-              right: 12,
-            }}
-          >
-            <CartesianGrid vertical={false} />
-            <XAxis
-              dataKey="date"
-              axisLine={false}
-              tickLine={false}
-              tick={{ fontSize: 12 }}
-              tickMargin={8}
-            />
-            <YAxis
-              axisLine={false}
-              tickLine={false}
-              tick={{ fontSize: 12 }}
-              tickMargin={8}
-              tickFormatter={(value) => `$${value.toFixed(2)}`}
-              domain={[0.5, 2.5]}
-              ticks={[0.5, 1.0, 1.5, 2.0, 2.5]}
-            />
-            <ChartTooltip cursor={false} content={<ChartTooltipContent />} />
-            <Line
-              type="monotone"
-              dataKey="price"
-              stroke="var(--color-price)"
-              strokeWidth={2}
-              dot={false}
-            />
-
-            <YAxis
-              yAxisId="right"
-              orientation="right"
-              axisLine={false}
-              tickLine={false}
-              tick={{ fontSize: 12, fill: "#3b82f6" }}
-              tickMargin={8}
-              dataKey="volume"
-            />
-          </LineChart>
-        </ChartContainer>
-      </CardContent>
-    </Card>
+        <CardContent className="p-0">
+          <ChartContainer className="h-[200px] mt-10 mb-7" config={chartConfig}>
+            <LineChart
+              accessibilityLayer
+              data={priceData}
+              margin={{
+                left: 12,
+                right: 12,
+              }}
+            >
+              <CartesianGrid vertical={false} />
+              <XAxis
+                dataKey="date"
+                axisLine={false}
+                tickLine={false}
+                tick={{ fontSize: 12 }}
+                tickMargin={8}
+              />
+              <YAxis
+                axisLine={false}
+                tickLine={false}
+                tick={{ fontSize: 12 }}
+                tickMargin={8}
+                tickFormatter={(value) => `$${value.toFixed(2)}`}
+                domain={[0.5, 2.5]}
+                ticks={[0.5, 1.0, 1.5, 2.0, 2.5]}
+              />
+              <ChartTooltip cursor={false} content={<ChartTooltipContent />} />
+              <Line
+                type="monotone"
+                dataKey="price"
+                stroke="#3b82f6"
+                strokeWidth={2}
+                dot={false}
+              />
+              <YAxis
+                yAxisId="right"
+                orientation="right"
+                axisLine={false}
+                tickLine={false}
+                tick={{ fontSize: 12, fill: "#3b82f6" }}
+                tickMargin={8}
+                dataKey="volume"
+              />
+            </LineChart>
+          </ChartContainer>
+        </CardContent>
+      </Card>
+    </main>
   );
 }

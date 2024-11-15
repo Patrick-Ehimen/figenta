@@ -10,8 +10,8 @@ export default function Home() {
     <main className="mx-12 mt-10">
       <VolumeChart />
 
-      <div className="space-y-8 px-4 mt-20">
-        <div className="grid gap-4 md:grid-cols-2">
+      <div className="flex space-y-8 px- mt-20">
+        <div className="flex gap-6">
           <FGAToken />
           <TopHub />
         </div>
