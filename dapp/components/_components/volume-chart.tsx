@@ -69,22 +69,43 @@ export default function VolumeChart() {
 
   return (
     <div className="grid gap-4 md:grid-cols-2">
-      <Card className="bg-gray-400">
+      <Card className="bg-white">
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
           <CardTitle className="text-base font-normal text-gray-600">
             Total Volume
           </CardTitle>
           <Tabs value={volumeView} onValueChange={setVolumeView}>
             <TabsList className="grid w-full grid-cols-3">
-              <TabsTrigger value="day">Day</TabsTrigger>
-              <TabsTrigger value="week">Week</TabsTrigger>
-              <TabsTrigger value="month">Month</TabsTrigger>
+              <TabsTrigger
+                value="day"
+                className={`${volumeView === "day" ? "" : "text-[#1379ffcb]"}`}
+              >
+                Day
+              </TabsTrigger>
+              <TabsTrigger
+                value="week"
+                className={`${volumeView === "week" ? "" : "text-[#1379ffcb]"}`}
+              >
+                Week
+              </TabsTrigger>
+              <TabsTrigger
+                value="month"
+                className={`${
+                  volumeView === "month" ? "" : "text-[#1379ffcb]"
+                }`}
+              >
+                Month
+              </TabsTrigger>
             </TabsList>
           </Tabs>
         </CardHeader>
         <CardContent>
-          <div className="text-2xl font-bold">$8,124,632.58</div>
-          <div className="text-xs text-muted-foreground">Dec 23, 2022</div>
+          <div className="text-2xl font-bold">
+            <span className="text-gray-500">$</span>
+            8,124,632
+            <span className="text-gray-500">.58</span>
+          </div>
+          <div className="text-xs text-muted-foreground my-5">Dec 23, 2022</div>
           <div className="h-[200px] w-full">
             <ResponsiveContainer width="100%" height="100%">
               <AreaChart
@@ -132,20 +153,45 @@ export default function VolumeChart() {
       </Card>
       <Card>
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-          <CardTitle className="text-base font-normal">
+          <CardTitle className="text-base font-normal text-gray-600">
             Total Liquidity
           </CardTitle>
           <Tabs value={liquidityView} onValueChange={setLiquidityView}>
             <TabsList className="grid w-full grid-cols-3">
-              <TabsTrigger value="day">Day</TabsTrigger>
-              <TabsTrigger value="week">Week</TabsTrigger>
-              <TabsTrigger value="month">Month</TabsTrigger>
+              <TabsTrigger
+                value="day"
+                className={`${
+                  liquidityView === "day" ? "" : "text-[#1379ffcb]"
+                }`}
+              >
+                Day
+              </TabsTrigger>
+              <TabsTrigger
+                value="week"
+                className={`${
+                  liquidityView === "week" ? "" : "text-[#1379ffcb]"
+                }`}
+              >
+                Week
+              </TabsTrigger>
+              <TabsTrigger
+                value="month"
+                className={`${
+                  liquidityView === "month" ? "" : "text-[#1379ffcb]"
+                }`}
+              >
+                Month
+              </TabsTrigger>
             </TabsList>
           </Tabs>
         </CardHeader>
         <CardContent>
-          <div className="text-2xl font-bold">$3,006,124,632.55</div>
-          <div className="text-xs text-muted-foreground">
+          <div className="text-2xl font-bold">
+            <span className="text-gray-500">$</span>
+            3,006,124,632
+            <span className="text-gray-500">.55</span>
+          </div>
+          <div className="text-xs text-muted-foreground my-5">
             Nov 23, 2021 - Dec 23, 2022
           </div>
           <div className="h-[200px] w-full">
