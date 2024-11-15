@@ -2,13 +2,20 @@ import Image from "next/image";
 
 // import { VolumeChart } from "@/components/_components/volume-chart";
 import VolumeChart from "@/components/_components/volume-chart";
+import FGAToken from "@/components/_components/fga-token";
+import TopHub from "@/components/_components/top-hub";
 
 export default function Home() {
   return (
     <main className="mx-12 mt-10">
-      {/* <div className="grid gap-4 md:grid-cols-2"> */}
       <VolumeChart />
-      {/* </div> */}
+
+      <div className="space-y-8 px-4 mt-20">
+        <div className="grid gap-4 md:grid-cols-2">
+          <FGAToken />
+          <TopHub />
+        </div>
+      </div>
       <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
         <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
           <Image
