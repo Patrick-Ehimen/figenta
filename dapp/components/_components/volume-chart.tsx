@@ -113,7 +113,11 @@ export default function VolumeChart() {
                   tickCount={5}
                   domain={[2000000, 12000000]}
                 />
-                <Tooltip content={<CustomTooltip />} />
+                <Tooltip
+                  content={
+                    <CustomTooltip active={false} payload={[]} label="" />
+                  }
+                />
                 <Area
                   type="monotone"
                   dataKey="value"
@@ -158,7 +162,11 @@ export default function VolumeChart() {
                   tickCount={5}
                   domain={[0, 5000000000]}
                 />
-                <Tooltip content={<CustomTooltip />} />
+                <Tooltip
+                  content={
+                    <CustomTooltip active={false} payload={[]} label="" />
+                  }
+                />
                 <Bar
                   dataKey="value"
                   fill="hsl(217, 91%, 60%)"
